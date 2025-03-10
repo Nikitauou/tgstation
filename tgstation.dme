@@ -6561,6 +6561,7 @@
 #include "interface\fonts\vcr_osd_mono.dm"
 #include "newstuff\ahathg\code\gunpoint.dm"
 #include "newstuff\ahathg\code\gunpoint_datum.dm"
+#include "newstuff\ahathg\code\papperball_gun.dm"
 #include "newstuff\ahathg\code\Venomsnake.dm"
 #include "newstuff\nikitauou\code\crossbow.dm"
 #include "newstuff\nikitauou\code\uncanny.dm"

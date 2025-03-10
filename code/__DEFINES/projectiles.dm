@@ -103,3 +103,6 @@
 
 /// For how long projectile tracers linger
 #define PROJECTILE_TRACER_DURATION 0.3 SECONDS
+
+/// Caliber used by the pepperball gun
+#define CALIBER_PEPPERBALL "Pepper Ball"
