@@ -71,8 +71,6 @@
 
 /obj/item/ammo_box/advanced/pepperballs
 	name = "pepperball ammo box"
-	icon = 'newstuff/ahathg/icons/pepperball/ammoboxes.dmi'
-	icon_state = "box10x24"
 	desc = "A box of pepper ball rounds, holds eighteen rounds."
 	custom_price = PAYCHECK_CREW * 2
 	ammo_type = /obj/item/ammo_casing/pepperball
