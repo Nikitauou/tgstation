@@ -4,7 +4,6 @@
 	icon = 'newstuff/nikitauou/icons/clothing.dmi'
 	worn_icon = 'newstuff/nikitauou/icons/worn.dmi'
 	icon_state = "discomask"
-	inhand_icon_state = "discomask"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 	lefthand_file = 'icons/mob/inhands/clothing/masks_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/clothing/masks_righthand.dmi'
