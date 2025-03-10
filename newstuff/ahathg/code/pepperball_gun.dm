@@ -42,7 +42,7 @@
 	stamina = 5
 	shrapnel_type = null
 	sharpness = NONE
-	embed_data = null
+	embed_type = null
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 	var/contained_reagent = /datum/reagent/consumable/condensedcapsaicin
 	var/reagent_volume = 5
