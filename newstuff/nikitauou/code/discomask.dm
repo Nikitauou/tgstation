@@ -31,13 +31,7 @@
 /obj/item/clothing/head/utility/welding/disco/proc/flash(intensity = 1,length = 1)
 	SIGNAL_HANDLER
 
-	if(!loc.get_filter("disco_rays"))
-		loc.add_filter(name = "disco_rays", priority = 3, params = list(
-			type = "rays",x=0,y=0, size = 28, density = 16, color = "white", flags = FILTER_UNDERLAY, offset = 0
-		))
-		animate(loc.get_filter("disco_rays"), offset = 10, time = 3 SECONDS, loop = -1)
-		addtimer(CALLBACK(loc, TYPE_PROC_REF(/datum, remove_filter), "disco_rays"), 1.5 SECONDS)
-
+	playsound(loc,'newstuff/nikitauou/sound/peppino-taunt.mp3',50,TRUE)
 	var/list/hearers = get_hearers_in_view(view_radius = DEFAULT_MESSAGE_RANGE, source=src)
 	for (var/mob/hearer in hearers)
 		if(ishuman(hearer))
