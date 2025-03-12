@@ -6564,6 +6564,6 @@
 #include "newstuff\ahathg\code\pepperball_gun.dm"
 #include "newstuff\ahathg\code\Venomsnake.dm"
 #include "newstuff\nikitauou\code\crossbow.dm"
-#include "newstuff\nikitauou\code\discomask.dm"
+#include "newstuff\nikitauou\code\disco_equipment.dm"
 #include "newstuff\nikitauou\code\uncanny.dm"
 // END_INCLUDE

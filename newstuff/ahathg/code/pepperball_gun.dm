@@ -55,10 +55,14 @@
 			R.expose_mob(M, VAPOR, reagent_volume)
 	. = ..()
 
-/obj/item/ammo_box/advanced/pepperballs
+/obj/item/ammo_box/pepperballs
 	name = "pepperball ammo box"
-
 	desc = "A box of pepper ball rounds, holds eighteen rounds."
+	icon = 'icons/obj/weapons/guns/ammo.dmi'
+	inhand_icon_state = "syringe_kit"
+	icon_state = "10mmbox"
+	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	custom_price = PAYCHECK_CREW * 2
 	ammo_type = /obj/item/ammo_casing/pepperball
 	custom_materials = list(
