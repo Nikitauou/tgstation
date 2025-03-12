@@ -60,7 +60,7 @@
 	desc = "A box of pepper ball rounds, holds eighteen rounds."
 	icon = 'icons/obj/weapons/guns/ammo.dmi'
 	inhand_icon_state = "syringe_kit"
-	worn_icon_state = "10mmbox"
+	icon_state = "10mmbox"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	custom_price = PAYCHECK_CREW * 2
