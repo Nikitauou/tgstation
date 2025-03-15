@@ -44,6 +44,11 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	var/atom/movable/screen/module_store_icon
 	var/atom/movable/screen/floor_change
 
+	///RUINATION VARS START
+	var/atom/movable/screen/ruination_height_bg/ruination_height_bg
+	var/atom/movable/screen/ruination_height/ruination_height
+	///RUINATION VARS END
+
 	var/list/static_inventory = list() //the screen objects which are static
 	var/list/toggleable_inventory = list() //the screen objects which can be hidden
 	var/list/atom/movable/screen/hotkeybuttons = list() //the buttons that can be used via hotkeys
