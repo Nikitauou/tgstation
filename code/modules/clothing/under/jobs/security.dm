@@ -24,8 +24,8 @@
 	wound = 10
 
 /obj/item/clothing/under/rank/security/officer
-	name = "униформа InteQ"
-	desc = "Тактическая униформа для размахивания кувалдой."
+	name = "security uniform"
+	desc = "A tactical security jumpsuit for officers complete with Nanotrasen belt buckle."
 	icon_state = "rsecurity"
 	inhand_icon_state = "r_suit"
 
@@ -69,8 +69,8 @@
 
 
 /obj/item/clothing/under/rank/security/warden
-	name = "Униформа InteQ"
-	desc = "Униформа пропитанная правосудием."
+	name = "security suit"
+	desc = "A formal security suit for officers complete with Nanotrasen belt buckle."
 	icon_state = "rwarden"
 	inhand_icon_state = "r_suit"
 
@@ -140,8 +140,8 @@
  * Head of Security
  */
 /obj/item/clothing/under/rank/security/head_of_security
-	name = "Униформа командира InteQ"
-	desc = "Пропитана кровью и мочой врагов."
+	name = "head of security's uniform"
+	desc = "A security jumpsuit decorated for those few with the dedication to achieve the position of Head of Security."
 	icon_state = "rhos"
 	inhand_icon_state = "r_suit"
 	armor_type = /datum/armor/clothing_under/security_head_of_security
@@ -154,8 +154,8 @@
 	wound = 10
 
 /obj/item/clothing/under/rank/security/head_of_security/skirt
-	name = "Юбка командира InteQ"
-	desc = "Женская доминация."
+	name = "head of security's skirt"
+	desc = "A security jumpskirt decorated for those few with the dedication to achieve the position of Head of Security."
 	icon_state = "rhos_skirt"
 	inhand_icon_state = "r_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
@@ -170,8 +170,8 @@
 	inhand_icon_state = "gy_suit"
 
 /obj/item/clothing/under/rank/security/head_of_security/alt
-	name = "Тактическая юбка командира InteQ"
-	desc = "Еще больше женской доминации."
+	name = "head of security's turtleneck"
+	desc = "A stylish alternative to the normal head of security jumpsuit, complete with tactical pants."
 	icon_state = "hosalt"
 	inhand_icon_state = "bl_suit"
 	alt_covers_chest = TRUE

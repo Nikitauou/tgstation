@@ -547,25 +547,6 @@
 		composed_return_message += span_hypnophrase(get_area_name(safe_turf, TRUE))
 		to_chat(heretic_mind.current, composed_return_message)
 
-		///NIKITKABUILD CHANGE - HERETIC RADIO ANNOUNCER
-		var/atom/movable/virtualspeaker/broadcaster = new(src)
-		var/atom/movable/virtualspeakersource = new(src)
-		broadcaster.source = virtualspeakersource
-		broadcaster.verb_say = "whispers"
-		broadcaster.name = "Unknown"
-		var/obj/item/radio/radio = new /obj/item/radio/headset/headset_cent(broadcaster)
-		var/datum/signal/subspace/vocal/signal = new(radio, FREQ_COMMON, broadcaster, /datum/language/common, "", list(SPAN_ITALICS),list())
-		signal.data["compression"]= 0
-		signal.transmission_method = TRANSMISSION_SUBSPACE
-		signal.levels = list(0)
-		signal.data["message"]= generate_heretic_text(4) + get_area_name(safe_turf, TRUE) + generate_heretic_text(4)
-		signal.broadcast()
-		qdel(signal)
-		qdel(radio)
-		qdel(broadcaster)
-		qdel(virtualspeakersource)
-
-
 /**
  * If they die in the shadow realm, they lost. Send them back.
  */
