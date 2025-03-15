@@ -1,7 +1,7 @@
 /// Sledgehammer
 /obj/item/inteq_sledgehammer
 	name = "sledgehammer"
-	desc = "Самый нормальный инструмент для разбивания бетона, не так ли?"
+	desc = "РљСѓРІР°Р»РґР°?"
 	icon_state = "sledgehammer"
 	icon = 'newstuff/ahathg/icons/weapons.dmi'
 	lefthand_file = 'newstuff/ahathg/icons/weapons_l.dmi'
@@ -20,10 +20,11 @@
 	hitsound = 'newstuff/ahathg/sound/sledge.ogg'
 	var/force_unwielded = 10
 	var/force_wielded = 30
-	attack_verb_continuous = list("бьет", "разбивает")
-	attack_verb_simple = list("бьет", "разбивает",)
+	attack_verb_continuous = list("РђС‚Р°РєСѓРµС‚",)
+	attack_verb_simple = list("Р‘СЊРµС‚",)
 
 /obj/item/inteq_sledgehammer/update_icon_state()
+	.=..()
 	icon_state = "sledgehammer"
 
 /obj/item/inteq_sledgehammer/suicide_act(mob/user)
