@@ -15,7 +15,7 @@
 /obj/item/poster/random_inteq
 	name = "random InteQ poster"
 	poster_type = /obj/structure/sign/poster/contraband/inteq/random
-	icon_state = "poster_inteq"
+	icon_state = "rolled_poster"
 
 /obj/item/storage/box/inteq_box/posters
 	name = "InteQ Posters Box"
