@@ -1585,13 +1585,8 @@
 /area/station/security/execution/transfer)
 "aEj" = (
 /obj/structure/table,
-/obj/item/poster/random_official{
-	pixel_y = 13
-	},
-/obj/item/poster/random_official{
-	pixel_y = 5
-	},
-/obj/item/poster/random_official,
+/obj/item/storage/box/inteq_box/posters,
+/obj/item/storage/box/inteq_box/posters,
 /turf/open/floor/iron/dark,
 /area/station/security/office)
 "aEr" = (
@@ -2098,6 +2093,10 @@
 	},
 /turf/open/floor/iron/grimy,
 /area/station/service/chapel/office)
+"aMq" = (
+/obj/structure/sign/flag/inteq,
+/turf/closed/wall,
+/area/station/security/evidence)
 "aMs" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/status_display/evac/directional/north,
@@ -17623,6 +17622,10 @@
 	},
 /turf/open/floor/plating/airless,
 /area/station/science/ordnance/bomb)
+"grP" = (
+/obj/structure/sign/flag/inteq,
+/turf/closed/wall/r_wall,
+/area/station/security/brig)
 "grZ" = (
 /obj/structure/chair,
 /obj/machinery/camera/directional/north{
@@ -19168,12 +19171,9 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "gUx" = (
-/obj/effect/turf_decal/trimline/red/filled/line{
-	dir = 1
-	},
-/obj/structure/sign/warning/electric_shock/directional/north,
-/turf/open/floor/iron,
-/area/station/hallway/primary/fore)
+/obj/structure/sign/flag/inteq,
+/turf/closed/wall,
+/area/station/security/medical)
 "gUH" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -39824,7 +39824,6 @@
 /area/station/commons/fitness/recreation)
 "oeR" = (
 /obj/structure/table/wood,
-/obj/item/book/manual/wiki/security_space_law,
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 1
 	},
@@ -41086,6 +41085,10 @@
 /obj/structure/sign/warning/vacuum/external,
 /turf/closed/wall,
 /area/station/cargo/storage)
+"oDV" = (
+/obj/structure/sign/flag/inteq,
+/turf/closed/wall/r_wall,
+/area/station/security/warden)
 "oDW" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner,
 /obj/machinery/firealarm/directional/south,
@@ -44354,7 +44357,6 @@
 	pixel_y = 7
 	},
 /obj/item/pen,
-/obj/item/book/manual/wiki/security_space_law,
 /turf/open/floor/carpet,
 /area/station/security/detectives_office)
 "pKv" = (
@@ -51313,14 +51315,6 @@
 /obj/structure/sign/directions/evac,
 /turf/closed/wall/r_wall,
 /area/station/hallway/primary/aft)
-"sfg" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/trimline/red/filled/line{
-	dir = 1
-	},
-/obj/structure/sign/warning/electric_shock/directional/north,
-/turf/open/floor/iron,
-/area/station/hallway/primary/fore)
 "sfn" = (
 /obj/effect/spawner/random/structure/grille,
 /obj/effect/mapping_helpers/broken_floor,
@@ -55661,6 +55655,10 @@
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/lesser)
+"tIJ" = (
+/obj/structure/sign/flag/inteq,
+/turf/closed/wall/r_wall,
+/area/station/security/lockers)
 "tIP" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/firedoor,
@@ -65834,7 +65832,6 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 1
 	},
-/obj/structure/sign/warning/electric_shock/directional/north,
 /obj/machinery/camera/directional/north{
 	c_tag = "Fore Primary Hallway Cells"
 	},
@@ -93317,7 +93314,7 @@ oWZ
 oPn
 oPn
 vUC
-sch
+gUx
 bRF
 tjh
 uTF
@@ -94096,8 +94093,8 @@ wxM
 tjh
 wsX
 wsX
-lAM
-gUx
+grP
+rsI
 gFi
 fkD
 qWF
@@ -94596,7 +94593,7 @@ lAM
 rJB
 ggj
 ggj
-ggj
+aMq
 vhD
 tjh
 rQS
@@ -94867,8 +94864,8 @@ kCt
 tjh
 wsX
 wsX
-lAM
-gUx
+grP
+rsI
 cHE
 gTP
 qWF
@@ -95638,7 +95635,7 @@ bkl
 ycM
 bkl
 bkl
-ycM
+oDV
 xfD
 rCo
 qWG
@@ -96923,8 +96920,8 @@ bkl
 ycM
 bkl
 bkl
-ycM
-sfg
+oDV
+bJq
 rCo
 gGo
 bjB
@@ -97934,7 +97931,7 @@ iTZ
 ahj
 ahj
 iTZ
-iTZ
+tIJ
 iTZ
 iTZ
 ahj
