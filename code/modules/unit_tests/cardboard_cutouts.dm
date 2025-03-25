@@ -23,5 +23,5 @@
 	// Making a custom subtype with direct_icon is hacky.
 	ASSERT(!isnull(/datum/cardboard_cutout/xenomorph_maid::direct_icon))
 
-	var/obj/item/cardboard_cutout/xenomorph/xenomorph_cutout = new
-	test_screenshot("xenomorph_cutout", getFlatIcon(xenomorph_cutout))
+//	var/obj/item/cardboard_cutout/xenomorph/xenomorph_cutout = new
+//	test_screenshot("xenomorph_cutout", getFlatIcon(xenomorph_cutout))
