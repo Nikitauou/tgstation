@@ -6567,5 +6567,9 @@
 #include "newstuff\ahathg\code\Venomsnake.dm"
 #include "newstuff\nikitauou\code\crossbow.dm"
 #include "newstuff\nikitauou\code\disco_equipment.dm"
+#include "newstuff\nikitauou\code\pain_system.dm"
+#include "newstuff\nikitauou\code\parallax.dm"
+#include "newstuff\nikitauou\code\parallax_forcer.dm"
+#include "newstuff\nikitauou\code\ruiners.dm"
 #include "newstuff\nikitauou\code\uncanny.dm"
 // END_INCLUDE

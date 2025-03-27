@@ -629,6 +629,17 @@
 			if(0 to NUTRITION_LEVEL_STARVING)
 				combined_msg += span_danger("You're starving!")
 
+	if(current_pain)
+		switch(current_pain)
+			if(10 to 25)
+				combined_msg += span_info("Ты испытываешь лёгкую боль!")
+			if(26 to 50)
+				combined_msg += span_danger("Тебе достаточно больно!")
+			if(51 to 75)
+				combined_msg += span_danger("Тебе ОЧЕНЬ больно!")
+			if(76 to 100)
+				combined_msg += span_danger("ОСТАНОВИТЕ МОИ МУЧЕНИЯ!!!")
+
 	//Compiles then shows the list of damaged organs and broken organs
 	var/list/broken = list()
 	var/list/damaged = list()

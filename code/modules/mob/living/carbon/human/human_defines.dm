@@ -94,3 +94,14 @@
 	VAR_PRIVATE/base_mob_height = HUMAN_HEIGHT_MEDIUM
 	/// Actual height of the mob. Don't touch this one, it is set via update_mob_height()
 	VAR_FINAL/mob_height = HUMAN_HEIGHT_MEDIUM
+
+	///NIKITKABUILD PAIN SYSTEM
+	var/list/pain_datums = list()
+	var/last_pain = 0
+	var/current_pain = 0
+	var/current_painkillers = 1
+	var/pain_threshold = 100
+
+	COOLDOWN_DECLARE(pain_itemdrop_cd)
+	COOLDOWN_DECLARE(pain_paralyze_cd)
+	COOLDOWN_DECLARE(pain_sleep_cd)

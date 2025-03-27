@@ -208,6 +208,10 @@
 	/// Lazylist of /datum/status_effect/grouped/bodypart_effect types. Instances of this are applied to the carbon when added the limb is attached, and merged with similair limbs
 	var/list/bodypart_effects
 
+	///NIKITKABUILD PAIN SYSTEM
+	var/can_feel_pain = TRUE
+	///NIKITKABUILD PAIN SYSTEM
+
 /obj/item/bodypart/apply_fantasy_bonuses(bonus)
 	. = ..()
 	unarmed_damage_low = modify_fantasy_variable("unarmed_damage_low", unarmed_damage_low, bonus, minimum = 1)
@@ -573,6 +577,11 @@
 		if(can_be_disabled)
 			update_disabled()
 		if(updating_health)
+			if(ishuman(owner))
+				var/mob/living/carbon/human/M = owner
+				if(can_feel_pain)
+					M.flash_pain(total_damage*8)
+					M.add_pain(total_damage*1.5,total_damage*0.75)
 			owner.updatehealth()
 	return update_bodypart_damage_state() || .
 

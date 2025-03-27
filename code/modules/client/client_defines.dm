@@ -193,6 +193,7 @@
 	///A lazy list of atoms we've examined in the last RECENT_EXAMINE_MAX_WINDOW (default 2) seconds, so that we will call [/atom/proc/examine_more] instead of [/atom/proc/examine] on them when examining
 	var/list/recent_examines
 
+	var/current_parallax
 	var/list/parallax_layers
 	var/list/parallax_layers_cached
 	var/atom/movable/screen/parallax_home/parallax_rock

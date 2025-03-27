@@ -12,6 +12,7 @@
 	preop_sound = 'sound/items/handling/surgery/scalpel1.ogg'
 	success_sound = 'sound/items/handling/surgery/scalpel2.ogg'
 	surgery_effects_mood = TRUE
+	step_pain = 40
 
 /datum/surgery_step/incise/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(
@@ -65,6 +66,7 @@
 		/obj/item/stack/cable_coil = 15)
 	time = 24
 	preop_sound = 'sound/items/handling/surgery/hemostat1.ogg'
+	step_pain = 20
 
 /datum/surgery_step/clamp_bleeders/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(
@@ -97,6 +99,7 @@
 	time = 24
 	preop_sound = 'sound/items/handling/surgery/retractor1.ogg'
 	success_sound = 'sound/items/handling/surgery/retractor2.ogg'
+	step_pain = 20
 
 /datum/surgery_step/retract_skin/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(
@@ -119,6 +122,7 @@
 	time = 24
 	preop_sound = 'sound/items/handling/surgery/cautery1.ogg'
 	success_sound = 'sound/items/handling/surgery/cautery2.ogg'
+	step_pain = 30
 
 /datum/surgery_step/close/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(
@@ -170,6 +174,7 @@
 	)
 	success_sound = 'sound/items/handling/surgery/organ2.ogg'
 	surgery_effects_mood = TRUE
+	step_pain = 60
 
 /datum/surgery_step/saw/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(
@@ -208,6 +213,7 @@
 		TOOL_SCREWDRIVER = 25,
 		/obj/item/kitchen/spoon = 20)
 	time = 30
+	step_pain = 40
 
 /datum/surgery_step/drill/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(

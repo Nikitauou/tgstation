@@ -751,7 +751,14 @@
 		clear_fullscreen("oxy")
 
 	//Fire and Brute damage overlay (BSSR)
-	var/hurtdamage = getBruteLoss() + getFireLoss() + damageoverlaytemp
+
+	var/hurtdamage
+	if(ishuman(src))
+		var/mob/living/carbon/human/M = src
+		hurtdamage = M.current_pain
+	else
+		hurtdamage = getBruteLoss() + getFireLoss() + damageoverlaytemp
+
 	if(hurtdamage && !HAS_TRAIT(src, TRAIT_NO_DAMAGE_OVERLAY))
 		var/severity = 0
 		switch(hurtdamage)
