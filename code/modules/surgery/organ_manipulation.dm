@@ -328,6 +328,7 @@
 /datum/surgery_step/manipulate_organs/internal
 	time = 6.4 SECONDS
 	name = "manipulate organs (hemostat/organ)"
+	step_pain = 60
 
 ///only operate on internal organs
 /datum/surgery_step/manipulate_organs/internal/can_use_organ(obj/item/organ/organ)
@@ -342,6 +343,7 @@
 /datum/surgery_step/manipulate_organs/external
 	time = 3.2 SECONDS
 	name = "manipulate features (hemostat/feature)"
+	step_pain = 50
 
 ///Only operate on external organs
 /datum/surgery_step/manipulate_organs/external/can_use_organ(obj/item/organ/organ)

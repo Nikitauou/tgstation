@@ -17,6 +17,7 @@
 	var/preop_sound //Sound played when the step is started
 	var/success_sound //Sound played if the step succeeded
 	var/failure_sound //Sound played if the step fails
+	var/step_pain = 0 //How painfull it is (See pain_system.dm for more explanation)
 	///If the surgery causes mood changes if the patient is conscious.
 	var/surgery_effects_mood = FALSE
 	///Which mood event to give the patient when surgery is starting while they're conscious. This should be permanent/not have a timer until the surgery either succeeds or fails, as those states will immediately replace it. Mostly just flavor text.
@@ -321,11 +322,21 @@
 				return
 			to_chat(target, span_notice("You feel a dull, numb sensation as your body is surgically operated on."))
 		else
+			if(ishuman(target))
+				var/mob/living/carbon/human/M = target
+				M.flash_pain(step_pain * 4)
+				M.add_pain(step_pain,step_pain/15)
+				M.updatehealth()
+				if(prob(M.current_pain) && !mechanical_surgery)
+					target.emote("scream")
+				if(step_pain + M.current_pain > 100 && M.stat < UNCONSCIOUS)
+					M.visible_message(span_danger("[M.name] теряет сознание от боли!"),span_userdanger("От невероятной боли во время операции ты теряешь сознание!"),null,COMBAT_MESSAGE_RANGE,M)
+					M.Unconscious(M.current_pain/3)
+
 			if(!pain_message)
 				return
 			to_chat(target, span_userdanger(pain_message))
-			if(prob(30) && !mechanical_surgery)
-				target.emote("scream")
+
 
 #undef SURGERY_SPEED_TRAIT_ANALGESIA
 #undef SURGERY_SPEED_DISSECTION_MODIFIER

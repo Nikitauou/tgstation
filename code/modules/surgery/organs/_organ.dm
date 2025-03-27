@@ -67,6 +67,11 @@
 	/// String displayed when the organ has decayed.
 	var/failing_desc = "has decayed for too long, and has turned a sickly color. It probably won't work without repairs."
 
+	///NIKITKABUILD PAIN SYSTEM
+	//Used for calculating pain on humans
+	var/can_feel_pain = TRUE
+	///NIKITKABUILD PAIN SYSTEM
+
 // Players can look at prefs before atoms SS init, and without this
 // they would not be able to see external organs, such as moth wings.
 // This is also necessary because assets SS is before atoms, and so

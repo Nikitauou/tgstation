@@ -638,10 +638,16 @@
 /datum/reagent/medicine/morphine/on_mob_metabolize(mob/living/affected_mob)
 	. = ..()
 	affected_mob.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
+	if(ishuman(affected_mob))
+		var/mob/living/carbon/human/M = affected_mob
+		M.current_painkillers += 0.5
 
 /datum/reagent/medicine/morphine/on_mob_end_metabolize(mob/living/affected_mob)
 	. = ..()
 	affected_mob.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
+	if(ishuman(affected_mob))
+		var/mob/living/carbon/human/M = affected_mob
+		M.current_painkillers -= 0.5
 
 /datum/reagent/medicine/morphine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
@@ -893,6 +899,18 @@
 	ph = 10.2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	metabolized_traits = list(TRAIT_NOCRITDAMAGE)
+
+/datum/reagent/medicine/epinephrine/on_mob_metabolize(mob/living/affected_mob)
+	. = ..()
+	if(ishuman(affected_mob))
+		var/mob/living/carbon/human/M = affected_mob
+		M.current_painkillers += 0.5
+
+/datum/reagent/medicine/epinephrine/on_mob_end_metabolize(mob/living/affected_mob)
+	. = ..()
+	if(ishuman(affected_mob))
+		var/mob/living/carbon/human/M = affected_mob
+		M.current_painkillers -= 0.5
 
 /datum/reagent/medicine/epinephrine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()

@@ -42,6 +42,7 @@
 	success_sound = 'sound/items/handling/surgery/organ1.ogg'
 	failure_sound = 'sound/items/handling/surgery/organ2.ogg'
 	surgery_effects_mood = TRUE
+	step_pain = 70
 
 /datum/surgery_step/lobectomy/mechanic
 	name = "Perform maintenance (scalpel or wrench)"
