@@ -92,7 +92,7 @@ GLOBAL_LIST_EMPTY(pulse_engines)
 /datum/dynamic_ruleset/roundstart/ruination
 	name = "Ruination"
 	persistent = TRUE
-	flags = list(LONE_RULESET)
+	flags = LONE_RULESET
 	antag_flag = ROLE_TRAITOR
 	antag_datum = /datum/antagonist/traitor/ruiner
 	protected_roles = list(
