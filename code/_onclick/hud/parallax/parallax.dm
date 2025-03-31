@@ -394,3 +394,9 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 
 /atom/movable/screen/parallax_layer/planet/update_o()
 	return //Shit won't move
+
+#undef PARALLAX_STANDARD
+#undef PARALLAX_SHIZO
+#undef PARALLAX_CLOUDS
+#undef PARALLAX_FALLING
+#undef PARALLAX_SURFACE
