@@ -1,3 +1,8 @@
+#define PARALLAX_STANDARD 0
+#define PARALLAX_SHIZO 1
+#define PARALLAX_CLOUDS 2
+#define PARALLAX_FALLING 3
+#define PARALLAX_SURFACE 4
 
 /datum/hud/proc/create_parallax(mob/viewmob)
 	var/mob/screenmob = viewmob || mymob
@@ -15,14 +20,37 @@
 		C.parallax_rock = new(null, src)
 	C.screen |= C.parallax_rock
 
-	if(!length(C.parallax_layers_cached))
+///NIKITKABUILD PARALLAXES START
+
+	if(C.current_parallax != GLOB.global_forced_parallax)
 		C.parallax_layers_cached = list()
-		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_1(null, src)
-		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_2(null, src)
-		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/planet(null, src)
-		if(SSparallax.random_layer)
-			C.parallax_layers_cached += new SSparallax.random_layer.type(null, src, FALSE, SSparallax.random_layer)
-		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_3(null, src)
+		if(GLOB.global_forced_parallax == PARALLAX_STANDARD)
+			C.current_parallax = PARALLAX_STANDARD
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_1(null, src)
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_2(null, src)
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/planet(null, src)
+			if(SSparallax.random_layer)
+				C.parallax_layers_cached += new SSparallax.random_layer.type(null, src, FALSE, SSparallax.random_layer)
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_3(null, src)
+
+		if(GLOB.global_forced_parallax == PARALLAX_SHIZO)
+			C.current_parallax = PARALLAX_SHIZO
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/shizospace(null,src)
+
+		if(GLOB.global_forced_parallax == PARALLAX_CLOUDS)
+			C.current_parallax = PARALLAX_CLOUDS
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/surface(null,src)
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/clouds(null,src)
+
+		if(GLOB.global_forced_parallax == PARALLAX_FALLING)
+			C.current_parallax = PARALLAX_FALLING
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/falling(null,src)
+
+		if(GLOB.global_forced_parallax == PARALLAX_SURFACE)
+			C.current_parallax = PARALLAX_SURFACE
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/surface(null,src)
+
+///NIKITKABUILD PARALLAXES END
 
 	C.parallax_layers = C.parallax_layers_cached.Copy()
 
@@ -366,3 +394,9 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/parallax_layer)
 
 /atom/movable/screen/parallax_layer/planet/update_o()
 	return //Shit won't move
+
+#undef PARALLAX_STANDARD
+#undef PARALLAX_SHIZO
+#undef PARALLAX_CLOUDS
+#undef PARALLAX_FALLING
+#undef PARALLAX_SURFACE
