@@ -182,7 +182,7 @@ GLOBAL_LIST_EMPTY(pulse_engines)
 			announce_stage = 4
 			priority_announce("БЛЮСПЕЙС ТРАНСЛОКАТОР АКТИВИРОВАН!", "БЛЮСПЕЙС ТРАНСЛОКАТОР", 'newstuff/nikitauou/sound/trevoga2.ogg', ANNOUNCEMENT_TYPE_PRIORITY)
 			SSticker.force_ending = FORCE_END_ROUND
-			GLOB.global_forced_parallax = PARALLAX_STANDARD
+			GLOB.global_forced_parallax = 0
 			for(var/m in GLOB.player_list)
 				if(ismob(m)&&!isnewplayer(m))
 					var/mob/M = m
@@ -193,23 +193,23 @@ GLOBAL_LIST_EMPTY(pulse_engines)
 		if(!ended)
 			switch(GLOB.ruination_orbit_height)
 				if(HEIGHT_OPTIMAL to INFINITY)
-					GLOB.global_forced_parallax = PARALLAX_STANDARD
+					GLOB.global_forced_parallax = 0
 					update_parallax(0)
 				if(HEIGHT_DANGER to HEIGHT_OPTIMAL)
-					GLOB.global_forced_parallax = PARALLAX_STANDARD
+					GLOB.global_forced_parallax = 0
 					update_parallax(1)
 				if(HEIGHT_CRITICAL to HEIGHT_DANGER)
-					GLOB.global_forced_parallax = PARALLAX_STANDARD
+					GLOB.global_forced_parallax = 0
 					update_parallax(2)
 				if(HEIGHT_DEADEND to HEIGHT_CRITICAL)
-					GLOB.global_forced_parallax = PARALLAX_CLOUDS
+					GLOB.global_forced_parallax = 2
 					update_parallax(3)
 				if(HEIGHT_CRASH to HEIGHT_DEADEND)
-					GLOB.global_forced_parallax = PARALLAX_FALLING
+					GLOB.global_forced_parallax = 3
 					update_parallax(4)
 				else
 					if(GLOB.ruination_orbit_height <= HEIGHT_CRASH)
-						GLOB.global_forced_parallax = PARALLAX_SURFACE
+						GLOB.global_forced_parallax = 4
 						update_parallax(5)
 						ended = TRUE
 						SSticker.force_ending = FORCE_END_ROUND
