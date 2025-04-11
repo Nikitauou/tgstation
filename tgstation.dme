@@ -6565,6 +6565,7 @@
 #include "newstuff\ahathg\code\sledgehummer.dm"
 #include "newstuff\ahathg\code\Venomsnake.dm"
 #include "newstuff\nikitauou\code\crossbow.dm"
+#include "newstuff\nikitauou\code\dagger.dm"
 #include "newstuff\nikitauou\code\disco_equipment.dm"
 #include "newstuff\nikitauou\code\pain_system.dm"
 #include "newstuff\nikitauou\code\parallax.dm"
