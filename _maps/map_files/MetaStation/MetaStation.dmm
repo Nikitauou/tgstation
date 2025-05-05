@@ -26475,6 +26475,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/station/science/lab)
+"jtR" = (
+/obj/structure/closet/secure_closet/blueshield,
+/turf/open/floor/iron/dark,
+/area/station/command/bridge)
 "jtS" = (
 /obj/structure/table/reinforced,
 /obj/machinery/power/apc/auto_name/directional/east,
@@ -41593,6 +41597,7 @@
 "oLD" = (
 /obj/structure/chair/comfy/beige,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/landmark/start/blueshield,
 /turf/open/floor/carpet,
 /area/station/command/bridge)
 "oLF" = (
@@ -96179,7 +96184,7 @@ gGy
 nEC
 pJY
 duI
-gGy
+jtR
 oLD
 klI
 lPZ

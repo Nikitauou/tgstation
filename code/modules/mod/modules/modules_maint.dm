@@ -8,7 +8,7 @@
 		up, but was taken out of modern suits because of the springlock's tendency to \"snap\" back \
 		into place when exposed to humidity. You know what it's like to have an entire exoskeleton enter you?"
 	icon_state = "springlock"
-	complexity = 3 // it is inside every part of your suit, so
+	complexity = 1 // it is inside every part of your suit, so
 	incompatible_modules = list(/obj/item/mod/module/springlock)
 	var/set_off = FALSE
 	var/static/list/gas_connections = list(
