@@ -4025,7 +4025,6 @@
 "btG" = (
 /obj/structure/window/spawner/directional/west,
 /obj/structure/table,
-/obj/item/storage/belt/utility/full,
 /obj/item/borg/upgrade/rename,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
@@ -5432,6 +5431,9 @@
 	},
 /obj/structure/fireaxecabinet/mechremoval/directional/east,
 /obj/machinery/light/small/directional/north,
+/obj/item/storage/belt/utility/full,
+/obj/item/storage/belt/utility/full,
+/obj/item/storage/belt/utility/full,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "bUt" = (
@@ -9310,6 +9312,7 @@
 /area/station/security/brig)
 "drA" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/atmospherics/miner/oxygen,
 /turf/open/floor/engine/o2,
 /area/station/engineering/atmos)
 "drE" = (
@@ -14579,6 +14582,13 @@
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /turf/open/floor/iron/white,
 /area/station/medical/surgery/theatre)
+"fiN" = (
+/obj/structure/lattice,
+/obj/item/stack/sheet/mineral/titanium{
+	amount = 5
+	},
+/turf/open/space/basic,
+/area/space/nearstation)
 "fiS" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer{
 	dir = 4
@@ -21142,6 +21152,7 @@
 /area/station/hallway/primary/starboard)
 "hDe" = (
 /obj/machinery/portable_atmospherics/canister/plasma,
+/obj/machinery/atmospherics/miner/plasma,
 /turf/open/floor/engine/plasma,
 /area/station/engineering/atmos)
 "hDp" = (
@@ -26051,6 +26062,9 @@
 /obj/structure/urinal/directional/north,
 /obj/effect/landmark/start/hangover,
 /obj/machinery/duct,
+/obj/item/stack/sheet/mineral/uranium{
+	base_pixel_y = 32
+	},
 /turf/open/floor/iron/freezer,
 /area/station/commons/toilet/restrooms)
 "jmc" = (
@@ -32324,7 +32338,8 @@
 	dir = 8
 	},
 /obj/machinery/door/window/right/directional/west{
-	name = "Shooting Range"
+	name = "Shooting Range";
+	max_integrity = 1000
 	},
 /turf/open/floor/iron,
 /area/station/security/range)
@@ -32850,6 +32865,7 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
+/obj/item/food/burger/crazy,
 /turf/open/floor/iron/freezer,
 /area/station/commons/toilet/restrooms)
 "lJn" = (
@@ -32975,6 +32991,7 @@
 	},
 /area/station/service/chapel/office)
 "lMq" = (
+/obj/effect/spawner/random/medical/surgery_tool_alien,
 /turf/open/misc/asteroid/basalt/airless,
 /area/space/nearstation)
 "lMC" = (
@@ -46034,6 +46051,7 @@
 /area/station/ai_monitored/command/nuke_storage)
 "qpM" = (
 /obj/effect/landmark/event_spawn,
+/obj/machinery/jukebox,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "qqg" = (
@@ -49269,6 +49287,7 @@
 /area/station/medical/office)
 "rvx" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
+/obj/machinery/atmospherics/miner/n2o,
 /turf/open/floor/engine/n2o,
 /area/station/engineering/atmos)
 "rvE" = (
@@ -50831,6 +50850,7 @@
 /area/station/commons/toilet/restrooms)
 "rWi" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/machinery/atmospherics/miner/nitrogen,
 /turf/open/floor/engine/n2,
 /area/station/engineering/atmos)
 "rWH" = (
@@ -58299,6 +58319,10 @@
 	dir = 8
 	},
 /area/station/medical/medbay/lobby)
+"uCk" = (
+/obj/effect/spawner/random/engineering/tool_alien,
+/turf/open/misc/asteroid/basalt/airless,
+/area/space/nearstation)
 "uCq" = (
 /obj/structure/closet/firecloset,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -62820,6 +62844,7 @@
 	name = "old radio";
 	pixel_y = 15
 	},
+/obj/item/stack/sheet/mineral/diamond/five,
 /turf/open/floor/plating,
 /area/station/maintenance/space_hut)
 "vZB" = (
@@ -103476,7 +103501,7 @@ lMJ
 lMJ
 lMJ
 aaa
-lMJ
+fiN
 aaf
 aaf
 kJi
@@ -126353,7 +126378,7 @@ aaa
 aaa
 aaa
 aaa
-lMq
+uCk
 htS
 nNL
 nNL
